@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: "Century Gothic", sans-serif;
+ }
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for College Name */
+.college-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+/* Style for Courses */
+.courses {
+    font-weight: bold;
+}
+
+/* Style for Facilities */
+.facilities {
+    font-style: italic;
+}
+
+/* Style for City */
+.city {
+    font-weight: bold;
+}
+
+/* Style for State */
+.state {
+    font-weight: bold;
+}
+
+/* Style for Country */
+.country {
+    font-weight: bold;
+}
+
+/* Style for College Type */
+.college-type {
+    font-weight: bold;
+}
+
+/* Style for Average Fees */
+.average-fees {
+    font-weight: bold;
+}
+
+/* Style for the horizontal line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 20px 0;
+}
+.mainbox{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(#000000bb, #000000bb), url(./images/small.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: row;
+ }
+ 
+.name{
+    color:#fff;
+    font-size: 35px;
+    margin:20px;
+    font-weight: 900;
+    letter-spacing: 0.66px;
+    
+
+}
+
+.locBox{
+    height:100px;
+    width:70%;
+    margin:30px;
+    padding:20px;
+    margin:auto;
+    margin-top:60px;
+    border:1px solid black;
+    background-position: center;
+    border:hidden;
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+}
+.location{
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    font-size: 35px;
+    font-style:normal;
+}
+
+
+
+@media (min-width: 600px){
+    .name{
+        font-size: 50px;
+    }
+}
+
+/* #scr{
+   
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('./images/hat.jpg') center top no-repeat fixed;
+    background-size: auto;
+}
+section{
+    padding:100px;
+    color:#111;
+} */
+#scr {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('./images/student.jpg') center top no-repeat fixed;
+    background-size: auto;
+    margin-top:90px;
+    
+  }
+
+  section {
+    padding: 100px;
+    color: #111;
+    display: flex;
+    background-color: black;
+    margin-top: 0px;
+  }
+
+  section div {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  .list {
+     list-style: none; 
+    padding: 10px;
+    color:#fff;
+    text-align: right;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  .courses{
+    color:#fff;
+    font-size: 30px;
+    margin:70px;
+    text-align: center;
+   
+  }
+  .adj {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .faci{
+    background-color:#6547C9;
+    height:90vh;
+    
+    
+  }
+
+  .titlefaci{
+    color:yellow;
+    font-size: 60px;
+    text-align: left;
+    
+    justify-content: center;
+    align-items: center; 
+}
+.ulfaci{
+    color:#fff;
+    font-size: 38px;
+    text-align: center;
+    margin:15px;
+    
+}
+.ululfaci{
+    margin:15px;
+    list-style:none;
+}
+li{
+    margin: 20px;
+    
+}
+.footer{
+    height:10vh;
+    width:100%;
+    background-color:#CAD0D5;
+}
+h5{
+    text-align:center;
+    color:black;
+    padding-top:20px;
+    font-size: 15px;
+}
+@media (max-width: 600px){
+    .location{
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .courses{
+        font-size:30px;
+        margin:10px;
+        letter-spacing: 3px;
+        font-weight: 500;
+        position: relative;
+        left:10px;
+    }
+    #scr{
+    margin-top:3rem;
+    }
+    .list{
+        list-style:circle;
+    }
+   .titlefaci{
+    text-align: center;
+    font-size: 50px;
+   }
+   .ululfaci{
+    font-size: 22px;
+    list-style: disc;
+    text-align: left;
+   }
+   .faci{
+    height: 70vh;
+   }
+   .footer{
+    margin-top:0px;
+   }
+}

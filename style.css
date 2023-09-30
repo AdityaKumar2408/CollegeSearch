@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: "Century Gothic", sans-serif;
+ }
+ 
+
+ 
+ 
+ .main-box{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(#000000bb, #000000bb), url(./images/hat.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30vh;
+ }
+ 
+ .main-box h1{
+    word-spacing: 8px;
+    margin-bottom: 75px;
+    font-family: serif;
+    ;
+ }
+
+ .main-box button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    border: 1px solid #ff8800;
+    color: #ffffff;
+ }
+ .main-box button:hover{
+    background: #ff8800;
+ } 
+ 
+ .container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+ }
+ .container h2{
+    color: #ff8800;
+    text-align: center;
+    margin: 30px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+ }
+ .container h2::before, .container h2::after{
+    content: "-----";
+    letter-spacing: -5px;
+    font-weight: lighter;
+    margin: 0 20px 0 10px;
+ }
+ .container .row{
+    display: flex;
+    justify-content: space-between;
+ }
+ .container .column{
+    width: 32%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+ }
+ .container .column img{
+    width: 100%;
+    height: auto;
+ }
+ .container .column a:last-child{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
+    top: 99%;
+    bottom: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ff8800c0;
+    text-align: center;
+    padding-top: 14vw;
+    font-size: 3vw;
+    color: #ffffff;
+    text-decoration: none;
+ }
+ .container .column:hover a:last-child{
+    height: 100%;
+    top: 0;
+ }
+ /* Add this CSS to your styles.css file */
+
+/* Remove bullets from unordered list */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style each suggestion item */
+ul#suggestionList li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    border-bottom: none;
+    
+   }
+
+/* Style the last suggestion item to remove the border */
+ul#suggestionList li:last-child {
+    border-bottom: none;
+}
+/* Add pointer cursor on hover */
+#suggestionList li:hover {
+    cursor: pointer;
+}
+
+/* Highlight suggestion on click */
+#suggestionList li.clicked {
+    background-color: #f0f0f0;
+}
+#suggestionList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#suggestionList li {
+    cursor: pointer;
+}
+
+#suggestionList li:hover {
+    background-color: #f0f0f0;
+    color:black;
+}
+.box input{
+   
+   width:40%;
+   height:5vh;
+   border-radius: 30px;
+   padding-left: 20px;
+}
+.btn{
+   border-radius: 50%;
+   margin-top:15px;
+}

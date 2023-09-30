@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="author" content="Suraj Kupate"> -->
+   <link rel="stylesheet" href="rstyle.css">
+
+   <title>College Details</title>
+</head>
+<body>
+   <div id="collegeDetails"></div>
+
+   <script>
+    window.addEventListener('scroll', function() {
+        const bg = document.getElementById('scr');
+        const windowHeight = window.innerHeight;
+        const imageHeight = bg.clientHeight;
+        const scrollPosition = window.pageYOffset;
+
+        const maxScroll = imageHeight - windowHeight;
+        const scrollPercent = Math.min(scrollPosition / maxScroll, 1);
+
+        const minBackgroundSize = 30;  // Minimum background size
+        const maxBackgroundSize = 100; // Maximum background size
+
+        const backgroundSize = minBackgroundSize + (maxBackgroundSize - minBackgroundSize) * scrollPercent;
+        bg.style.backgroundSize = `${backgroundSize}%`;
+    });
+       // Function to display top 7 items
+       function displayTopItems(items) {
+           const itemList = items.split(',').map(item => item.trim());
+           return itemList.slice(0, 7).join(', ');
+       }
+
+       // Extract the colleges from the query parameter
+       const urlParams = new URLSearchParams(window.location.search);
+       const encodedColleges = urlParams.get('colleges');
+       const matchingColleges = JSON.parse(decodeURIComponent(encodedColleges));
+
+       // Display college details
+       const collegeDetailsElement = document.getElementById('collegeDetails');
+    //    collegeDetailsElement.innerHTML = '<h1>College Details</h1>';
+
+       matchingColleges.forEach(college => {
+           collegeDetailsElement.innerHTML += `
+              <div class="mainbox"> <div class="name"> ${college.CollegeName}
+                </div>
+              </div>
+              <div>
+                <div class="locBox">
+             <div class="location"> ${college.City}, ${college.State}, ${college.Country}</div> 
+             </div>
+               
+                </div>
+               <div id="scr"></div>
+               <section><div class"adj"><div class="courses"><strong>Courses:</strong></div><div>
+                   <ul class="list">
+                       ${displayTopItems(college.Courses).split(',').map(course => `<li>${course.trim()}</li>`).join('')+"&many more..."}
+                   </ul>
+                   
+               </div></section>
+               <div class="faci"><div class="titlefaci"><strong>Facilities:</strong>
+                  </div> <div class="ulfaci">
+                    <ul class="ululfaci">
+                       ${displayTopItems(college.Facilities).split(',').map(facility => `<li>${facility.trim()}</li>`).join('')+"&many more..."}
+                   </ul></div>
+               </div>
+               <div class=footer>
+                <div class="text">
+                    <h5> © 2023 College Website. All rights reserved.</div>
+                        </div>`;  // Add line breaks and horizontal line for separation
+       });
+   </script>
+</body>
+</html>
